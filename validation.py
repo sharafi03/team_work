@@ -17,7 +17,8 @@ def price_validator(price):
 
 
 def date_validator(date):
-    payment_date =date.replace("/", "-")
+    date =date.replace("/", "-")
+    date =date.replace(".", "-")
     if re.match(r'\d{4}-\d\d?-\d\d?', date):
         return True
     else:
